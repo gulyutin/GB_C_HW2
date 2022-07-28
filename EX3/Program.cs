@@ -1,16 +1,23 @@
-﻿// Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23. 
-// 14 -> нет 46 -> нет 161 -> да
+﻿// Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
+// и проверяет, является ли этот день выходным.
 
-Console.Write("Введите число ");
+Console.Write("Номер дня недели: ");
 string firstString = Console.ReadLine();
 int firstArg = Convert.ToInt32(firstString);
 
-if (firstArg % 7 == 0 && firstArg % 23 == 0)
+if (firstArg <8)
     {
-        Console.WriteLine("Да");
+        if (firstArg <6)
+            {
+                Console.WriteLine("Нет");
+            }
+                else
+                {
+                    Console.WriteLine("Да");
+                }
     }
         else 
         {
-            Console.Write("Нет");
+            Console.Write("В неделе всего 7 дней");
         }
 
