@@ -1,20 +1,14 @@
-﻿// Напишите программу, которая выводит случайное трёхзначное число 
-// и удаляет вторую цифру этого числа. 456 -> 46 782 -> 72 918 -> 98
+﻿// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-Console.Write("Введите первое число ");
+Console.Write("Введите число: ");
 string firstString = Console.ReadLine();
 int firstArg = Convert.ToInt32(firstString);
-Console.Write("Введите второе число ");
-string secondString = Console.ReadLine();
-int secondArg = Convert.ToInt32(secondString);
-int Div = firstArg % secondArg; 
-
-if (Div == 0)
+int SecondNumber = 0;
+if (firstArg > 100)
     {
-        Console.WriteLine("Кратно ");
+        SecondNumber = firstArg % 1000 / 100;
+        Console.Write("Третья цифра числа -> ");
+        Console.Write(SecondNumber);
     }
         else 
-        {
-        Console.Write("Не кратно, остаток ");
-        Console.Write(Div);
-        }
+        Console.WriteLine("Третьей цифры нет");
